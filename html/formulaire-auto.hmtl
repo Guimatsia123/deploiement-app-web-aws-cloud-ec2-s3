@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Assurance Automobile">
+        <title>Assurance Automobile</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <!--section entete et baniere-->
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#"><img src="../img/lion-logo.png" alt="lions"></a>
+
+                </div>
+                <nav>   
+                    <ul class="nav-links">
+                        <li><a href="../index.html" >Accueil</a></li>
+                        <li><a href="../html/fan-club.html" class="cta-btn"> Faire une soumission </a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+                </nav>
+
+
+        
+
+            </div>
+        </header>
+        <!--section d'affichage des titres de pages-->
+        <section class="path-breadcrumbs-bg">
+            <div class="path-breadcrumbs-container">
+                <h1>Soumission d'assurance auto </h1>
+                </div>
+
+        </section>
+
+        <!--Formulaire d'inscription pour devenir fan-->
+
+        <div class="form-container">
+            <div id="result" class="hidden"></div>
+            <form action="registration.py" method="POST" id="reclamation-form">
+                <div class="form-group gender-inline">
+                    <label for="gender"> Quel est votre genre?</label>
+                    <select name="gender" id="gender">
+                        <option value="">Choisissez votre genre</option>
+                        <option value="male">Homme</option>
+                        <option value="female">Femme</option>
+                        <option value="other">Autre</option>
+                    </select>
+                    <div id="gender_error" class="error"></div>
+                </div> 
+                
+                <div class="form-group">
+                    <label for="dob"> Quel est votre date de naissance?</label>
+                    <input type="date" id="dob" name="dob" required>
+                    <div id="dob_error" class="error"></div>
+                </div>  
+                <div class="form-group">
+                    <label for="vehicule_value"> Quelle est la valeur d'achat de votre véhicule?</label>
+                    <input type="number" min="0" step="50" id="vehicule_value" name="vehicule_value"  placeholder="Saisir la valeur de votre vehicule..."  >
+                    <div id="vehicule_value_error" class="error"></div>
+                </div> 
+
+                <div class="form-group">
+                    <label for="vehicule_year"> Quelle est l'année de fabrication de votre véhicule?</label>
+                    <input type="number"  min="1900" id="vehicule_year" name="vehicule_year"  placeholder="Saisir l'année de fabricationde votre vehicule..." required>
+                    <div id="vehicule_year_error" class="error"></div>
+                </div> 
+
+                <div class="form-group">
+                    <label for="mileage"> Combien de kilomètres parcourez-vous par année?</label>
+                    <input type="number" min="1" step="10" id="mileage" name="mileage"   placeholder="Saisir le nombre de kilomètres..." required>
+                    <div id="mileage_error" class="error"></div>               
+                </div> 
+
+                <div class="form-group">
+                    <label> Est-ce que votre véhicule possède une caméra de recul?</label>
+                    <div class="radio-group" required>
+                        <input type="radio" name="vehicule_has_camera" id="yes" value="yes">
+                        <label for="vehicule_has_camera">Oui</label>
+
+                        <input type="radio" name="vehicule_has_camera" id="no" value="no">
+                        <label for="vehicule_has_camera">Non</label>
+                        <div id="vehicule_has_camera_error" class="error"></div>
+
+                    </div>
+                </div>  
+                <div class="form-group">
+                    <label> Avez-vous fait des réclamations d'assurance auto dans les 6 dernières années? (oui/non)</label>
+                    <div class="radio-group" required >
+                        <input type="radio" name="is_not_first_reclamation" id="yes" value="yes">
+                        <label for="is_not_first_reclamation">Oui</label>
+
+                        <input type="radio" name="is_not_first_reclamation" id="no" value="no">
+                        <label for="is_not_first_reclamation">Non</label>
+                        <div id="is_not_first_reclamation_error" class="error"></div>
+
+                    </div>
+
+                </div>  
+
+                <div class="form-group hidden" id="nb_reclamations_group">
+                    <label for="nb_reclamations">Combien de réclamations avez-vous faites?</label>
+                    <input type="number" min="1" max="4" id="nb_reclamations" name="nb_reclamations"  placeholder="Saisir le nombre de reclamation faites..." required>
+                    <div id="nb_reclamations_error" class="error"></div>
+
+                </div>  
+
+                <div id="reclamation_amount" class="hidden">
+                    <!--Liste des reclamations cachees.-->
+
+                </div>
+                
+                
+
+  
+                <button type="submit" class="btn-submit"> Sousmettre une reclamation</button>
+                
+
+            </form>
+            <button id="new_submission" class="hidden"> Faire une nouvelle soumission</button>
+        </div>
+
+        <!--section footer-->
+        <footer id="footer">
+            <div class="footer-content">
+
+               <div class="footer-section conctact-us">
+                   <h3>Contact</h3>
+                   <p>Email: infos@lionsindomptable.cm</p>
+                   <p>Telephone: +237 691722122</p>
+               </div>
+                   <div class="copyright">
+                   <!--Lien externe vers le site de l'Uqam.-->
+                   <p>&copy; 2024 <a href="https://uqam.ca/" target="_blank">Departement Informatique  UQAM</a>. Tous droits reserves </p>
+
+                   </div>
+
+               </div>
+       </footer>
+       <script src = "js/script.js"></script>
+    </body>
+</html>
